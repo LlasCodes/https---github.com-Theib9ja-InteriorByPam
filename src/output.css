@@ -1885,6 +1885,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .md\:flex-wrap {
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
+  }
   .md\:pt-0 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 0);
@@ -1948,24 +1953,20 @@ h3 {
   width: 200px;
   margin: auto;
   border-radius: 3px;
+  transition: all 1s ease;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 .products {
   margin-top: 40px;
   background-color: white;
+  overflow: hidden;
 }
 .burton {
   margin-top: 30px !important;
   margin-left: 10px !important;
   padding: 10px 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.products {
-  overflow: hidden;
-}
-.products img {
-  transition: all 1s ease;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
 }
 .products img:hover {
   transform: scale(1.2);
